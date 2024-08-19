@@ -19,9 +19,9 @@ class FibonacciTest {
     }
 
     @Test
-    fun `fib(3) = fib(1) + fib(2)`() {
-        val result = Fibonacci.fib(3)
-        assertThat(result).isEqualTo(3)
+    fun `fib(n) = fib(n-2) + fib(n-1)`() {
+        val result = Fibonacci.fib(16)
+        assertThat(result).isEqualTo(987)
     }
 
 }

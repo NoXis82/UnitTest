@@ -16,7 +16,7 @@ object OtherCode {
         var a = 0L
         var b = 1L
         var c = 1L
-        (0..n - 2).forEach { i ->
+        (1..n - 1).forEach { i ->
             c = a + b
             a = b
             b = c
@@ -29,7 +29,7 @@ object OtherCode {
      * e.g. "(a * b))" should return false
      */
     fun checkBraces(string: String): Boolean {
-        return string.count { it == '(' } == string.count { it == ')' }
+        return string.count { it == '(' } == string.count { it == ')' } && string.first() == '('
     }
 
 }

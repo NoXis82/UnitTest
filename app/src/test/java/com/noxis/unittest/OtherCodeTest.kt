@@ -37,5 +37,9 @@ class OtherCodeTest {
         assertThat(result).isTrue()
     }
 
-
+    @Test
+    fun `)a * b( return true`() {
+        val result = OtherCode.checkBraces(")a * b(")
+        assertThat(result).isFalse()
+    }
 }

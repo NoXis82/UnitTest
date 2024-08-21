@@ -13,6 +13,7 @@ mockk = "1.13.10"
 jupiter = "5.8.2"
 jupiterParams = "5.10.0"
 coroutinesTest = "1.8.0"
+room = "2.6.1"
 
 
 [libraries]
@@ -28,6 +29,10 @@ jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.re
 jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "jupiterParams" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 
+#Room
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -43,4 +48,5 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 

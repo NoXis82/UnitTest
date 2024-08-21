@@ -39,6 +39,8 @@ android {
     buildFeatures {
         compose = true
     }
+    tasks.withType<Test> { useJUnitPlatform() }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
@@ -59,6 +61,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    testImplementation(libs.jupiter.api)
+    testImplementation(libs.jupiter.params)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testRuntimeOnly(libs.jupiter.engine)
+
     testImplementation(libs.junit)
     testImplementation(libs.truth)
     androidTestImplementation(libs.androidx.junit)

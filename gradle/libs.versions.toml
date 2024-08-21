@@ -14,13 +14,13 @@ jupiter = "5.8.2"
 jupiterParams = "5.10.0"
 coroutinesTest = "1.8.0"
 room = "2.6.1"
-
+coreTesting = "2.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+#test
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 truth = {module = "com.google.truth:truth", version.ref = "truth"}
-
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
@@ -28,6 +28,8 @@ jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "j
 jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jupiter" }
 jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "jupiterParams" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+
 
 #Room
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }

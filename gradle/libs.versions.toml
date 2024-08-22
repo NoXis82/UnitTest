@@ -35,7 +35,6 @@ jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.re
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 
-
 #Room
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }

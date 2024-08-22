@@ -1,4 +1,4 @@
-package com.noxis.unittest
+package com.noxis.unittest.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

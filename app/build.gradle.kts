@@ -18,7 +18,7 @@ android {
 
         buildConfigField("String", "API_KEY", "${project.properties["API_KEY"]}")
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.noxis.unittest.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -92,6 +92,9 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.truth)
     testImplementation(libs.core.testing)
+
+    androidTestImplementation(libs.hilt.android.testing)
+    kaptAndroidTest(libs.hilt.android.compiler)
 
     androidTestImplementation(libs.core.testing)
     androidTestImplementation(libs.androidx.junit)

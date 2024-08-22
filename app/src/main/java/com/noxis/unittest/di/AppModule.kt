@@ -2,10 +2,13 @@ package com.noxis.unittest.di
 
 import android.content.Context
 import androidx.room.Room
+import com.noxis.unittest.data.local.ShoppingDao
 import com.noxis.unittest.data.local.ShoppingItemDatabase
 import com.noxis.unittest.data.remote.api.PixabayAPI
 import com.noxis.unittest.other.Constants.BASE_URL
 import com.noxis.unittest.other.Constants.DATABASE_NAME
+import com.noxis.unittest.repositories.DefaultShoppingRepository
+import com.noxis.unittest.repositories.ShoppingRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,5 +42,12 @@ object AppModule {
             .build()
             .create(PixabayAPI::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideDefaultShoppingRepository(
+        dao: ShoppingDao,
+        api: PixabayAPI
+    ) = DefaultShoppingRepository(dao, api) as ShoppingRepository
 
 }

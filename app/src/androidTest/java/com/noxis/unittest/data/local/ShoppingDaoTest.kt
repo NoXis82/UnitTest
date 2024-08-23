@@ -1,12 +1,15 @@
 package com.noxis.unittest.data.local
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
 import com.noxis.unittest.getOrAwaitValue
+import com.noxis.unittest.launchFragmentInHiltContainer
+import com.noxis.unittest.ui.ShoppingFragment
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -50,6 +53,13 @@ class ShoppingDaoTest {
     @After
     fun tearDown() {
         database.close()
+    }
+
+    @Test
+    fun testLaunchFragmentInHiltContainer() {
+        launchFragmentInHiltContainer<ShoppingFragment> {
+
+        }
     }
 
     @Test

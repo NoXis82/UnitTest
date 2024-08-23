@@ -98,6 +98,7 @@ dependencies {
 
     androidTestImplementation(libs.hilt.android.testing)
     kaptAndroidTest(libs.hilt.android.compiler)
+    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.46")
 
     androidTestImplementation(libs.core.testing)
     androidTestImplementation(libs.androidx.junit)

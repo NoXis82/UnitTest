@@ -60,6 +60,9 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.appcompat:appcompat:1.7.0")
+    implementation ("androidx.fragment:fragment-ktx:1.8.2")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -102,6 +105,12 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(libs.truth)
+
+    debugImplementation("androidx.fragment:fragment-testing-manifest:1.8.2")
+
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    debugImplementation(libs.fragment.testing)
 }

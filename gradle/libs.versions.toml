@@ -23,7 +23,8 @@ navigation = "2.3.0"
 mockito = "2.21.0"
 navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
-
+navigationSafeargs = "2.5.0"
+navigationSafeargsKotlin = "2.5.0"
 
 
 [libraries]
@@ -66,7 +67,8 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 
 #Mockito
-mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+#mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito = { module = "org.mockito:mockito-android", version.ref = "mockito" }
 
 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -88,3 +90,4 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 androidx-room = { id = "androidx.room", version.ref = "room" }
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigationSafeargsKotlin" }

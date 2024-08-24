@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import androidx.fragment.app.testing.EmptyFragmentActivity
 import androidx.fragment.testing.manifest.R
+import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -39,7 +40,9 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
 
         activity.supportFragmentManager.beginTransaction()
             .add(android.R.id.content, fragment, "")
-            .commitNow()
+//            .setMaxLifecycle(fragment, Lifecycle.State.RESUMED)
+            .commitNowAllowingStateLoss()
+//            .commitNow()
 
         (fragment as T).action()
     }

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kapt)
+    alias(libs.plugins.navigation.safeargs.kotlin)
 }
 
 android {
@@ -41,6 +42,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        viewBinding = true
         compose = true
         buildConfig = true
     }
@@ -63,6 +65,8 @@ dependencies {
     implementation ("androidx.appcompat:appcompat:1.7.0")
     implementation ("androidx.fragment:fragment-ktx:1.8.2")
     implementation ("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation ("androidx.test:core-ktx:1.6.0")
+
     // Material Design
     implementation ("com.google.android.material:material:1.3.0-alpha02")
 
@@ -74,6 +78,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    //
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 
     //Room
     implementation(libs.room.runtime)

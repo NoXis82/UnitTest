@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kapt)
+    alias(libs.plugins.navigation.safeargs.kotlin)
 }
 
 android {
@@ -41,6 +42,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        viewBinding = true
         compose = true
         buildConfig = true
     }
@@ -62,7 +64,11 @@ android {
 dependencies {
     implementation ("androidx.appcompat:appcompat:1.7.0")
     implementation ("androidx.fragment:fragment-ktx:1.8.2")
+    implementation ("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation ("androidx.test:core-ktx:1.6.0")
 
+    // Material Design
+    implementation ("com.google.android.material:material:1.3.0-alpha02")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -73,9 +79,15 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    //
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+
     //Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt(libs.room.compiler)
 
     //Hilt
@@ -106,6 +118,9 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(libs.truth)
+//    Mockito
+    androidTestImplementation(libs.mockito)
+    testImplementation(libs.mockito)
 
     debugImplementation("androidx.fragment:fragment-testing-manifest:1.8.2")
 

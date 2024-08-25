@@ -1,6 +1,5 @@
 package com.noxis.unittest.ui
 
-import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso.onView

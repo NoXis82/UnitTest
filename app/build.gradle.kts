@@ -98,6 +98,11 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
 
+    //Glide
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
+
     testImplementation(libs.jupiter.api)
     testImplementation(libs.jupiter.params)
     testImplementation(libs.mockk)
@@ -118,6 +123,8 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(libs.truth)
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.3.0")
+
 //    Mockito
     androidTestImplementation(libs.mockito)
     testImplementation(libs.mockito)
